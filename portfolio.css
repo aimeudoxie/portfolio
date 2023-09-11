@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Lato, sans-serif;
+}
+
+.overlay-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f0f0f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%); /* Adjust brightness as needed */
+}
+.background h1{
+  color: rgb(255, 255, 255,7%);
+  font-size: 100px;
+
+  top: 7%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(217, 217, 217,11%); /* Change the color and opacity as needed */
+}
+.overlay h1{
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  text-align: center;
+  top: 13%;
+  left: 53%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline;
+  text-decoration: underline ;
+  text-decoration-color: #109D59;
+  text-decoration-thickness: 3px;
+}
+.menu{
+  display: flex;
+  height: 100vh;
+  width: 30vh;
+  align-items: center;
+  text-align: center;
+  background: rgb(15, 15, 15);
+  padding: 20px;
+  position: relative; /* Change to 'relative' */
+  z-index: 1;
+
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: none;
+}
+  li {
+    padding: 6px 0;
+  }
+    a {
+      position: relative;
+      display: block;
+      padding: 4px 0;
+      font-family: Lato, sans-serif;
+      color: #ecf0f1;
+      text-decoration: none;
+      transition: 0.5s;
+    }
+      a::after {
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #109D59;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+      }
+
+      a:hover {
+        color: #109D59;
+      }
+  
+      .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(15, 15, 15);
+        width: 30vh;
+      }
+      
+      .social-media {
+        padding: 10px;
+      }
+      
+      .social-media a {
+        margin-right: 10px;
+        display: inline-block;
+      }
+      
+      .social-media img {
+        width: 30px;
+        height: 30px;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+        color:#f7f8f8;
+      }
+      
+      .social-media img:hover {
+        opacity: 1;
+      }
+      .container {
+        width: 100%;
+        position: absolute;
+        top: 60%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+      }
+      table{
+        
+        border-collapse: separate; /* Use separate borders for cells */
+        border-spacing: 18px; 
+        border-radius: 5px;
+      }
+  table img{
+    width: 100%;
+    height: 100%; /* Allow images to expand to the full cell height */
+    display: inline-block; /* Make sure the image respects the text alignment */
+    
+  }
+  table image:hover{
+    transform: scale(1.2);
+  }
+  td {
+    border: none;
+    width: 262px;
+    height: 190px; /* Set a fixed height for the table cells */
+    border-radius: 10px;
+    overflow: hidden;
+}
